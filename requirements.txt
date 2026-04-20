@@ -1,12 +1,11 @@
---extra-index-url https://download.pytorch.org/whl/cpu
-
 # Web Server
 flask
 gunicorn
 
-# AI & Computer Vision (Dùng bản CPU để không bị quá tải RAM 512MB)
-torch
-torchvision
+# AI & Computer Vision
+ultralytics
+torch --extra-index-url https://download.pytorch.org/whl/cpu
+torchvision --extra-index-url https://download.pytorch.org/whl/cpu
 opencv-python-headless
 numpy==1.26.4
 pillow>=10.3.0
@@ -15,11 +14,12 @@ scipy>=1.4.1
 tqdm>=4.66.3
 matplotlib>=3.3
 
-# OCR (Bản ổn định nhất cho môi trường Cloud)
+# OCR
 easyocr
+rapidocr-onnxruntime
 six
 
-# Utils (Hỗ trợ YOLOv5 và xử lý dữ liệu)
+# Utils
 gitpython>=3.1.30
 psutil
 requests>=2.32.2
