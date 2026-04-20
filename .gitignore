@@ -11,6 +11,11 @@ __pycache__/
 *.pyd
 *.pyc
 yoloenv/
+*.jpg
+*.png
+data/
+runs/
+deploy.py
 venv/
 node_modules/
 *.pyd

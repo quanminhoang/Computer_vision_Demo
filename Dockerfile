@@ -27,3 +27,4 @@ ENV PORT=10000
 # 7. Lệnh chạy app
 # LƯU Ý: Nếu file app.py nằm trong thư mục webapp, dùng lệnh dưới:
 CMD ["gunicorn", "--bind", "0.0.0.0:10000", "webapp.app:app"]
+
