@@ -23,10 +23,8 @@ RESULTS_DIR = STATIC_DIR / "results"
 # Tự động tạo thư mục kết quả nếu chưa có khi khởi chạy server
 RESULTS_DIR.mkdir(parents=True, exist_ok=True)
 
-MODEL_PATH = Path(os.getenv("PLATE_MODEL_PATH", str(REPO_DIR / "runs" / "train" / "ket_qua_3202" / "weights" / "best.pt"))).resolve()
-CHAR_MODEL_PATH = Path(
-    os.getenv("PLATE_CHAR_MODEL_PATH", str(REPO_DIR / "runs" / "train" / "char36" / "weights" / "best.pt"))
-).resolve()
+MODEL_PATH = BASE_DIR / "best.pt"
+CHAR_MODEL_PATH = BASE_DIR / "best_char.pt"
 
 app = Flask(__name__, template_folder=str(BASE_DIR / "templates"), static_folder=str(STATIC_DIR))
 
@@ -71,8 +69,9 @@ def recognize():
 
     except Exception as exc:
         # Trả về lỗi chi tiết nếu có sự cố trong pipeline xử lý
-        return jsonify({"ok": False, "error": f"Lỗi hệ thống: {str(exc)}"}), 500
+        return jsonify({"ok": False, "error": "Lỗi hệ thống: {str(exc)}"}), 500
 
 if __name__ == "__main__":
     # Chạy Flask Server
     app.run(host="127.0.0.1", port=5000, debug=False)
+    
