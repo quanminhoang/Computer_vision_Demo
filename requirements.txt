@@ -1,9 +1,10 @@
+--index-url https://download.pytorch.org/whl/cpu
+
 # Web Server
 flask
 gunicorn
 
-# AI & Computer Vision (Dùng bản CPU cho nhẹ và ổn định trên Cloud)
---index-url https://download.pytorch.org/whl/cpu
+# AI & Computer Vision
 torch
 torchvision
 opencv-python-headless
@@ -14,7 +15,7 @@ scipy>=1.4.1
 tqdm>=4.66.3
 matplotlib>=3.3
 
-# OCR (Đã loại bỏ python-bidi để tránh lỗi build)
+# OCR
 easyocr
 six
 
