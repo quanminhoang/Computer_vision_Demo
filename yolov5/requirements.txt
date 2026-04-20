@@ -1,0 +1,27 @@
+# Web Server
+flask
+gunicorn
+
+# AI & Computer Vision (Dùng bản CPU cho nhẹ và ổn định trên Cloud)
+--index-url https://download.pytorch.org/whl/cpu
+torch
+torchvision
+opencv-python-headless
+numpy==1.26.4
+pillow>=10.3.0
+PyYAML>=5.3.1
+scipy>=1.4.1
+tqdm>=4.66.3
+matplotlib>=3.3
+
+# OCR (Đã loại bỏ python-bidi để tránh lỗi build)
+easyocr
+six
+
+# Utils
+gitpython>=3.1.30
+psutil
+requests>=2.32.2
+pandas>=1.1.4
+seaborn>=0.11.0
+packaging
